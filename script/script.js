@@ -22,3 +22,12 @@ $(".page-scroll").on("click", function (e) {
 
   e.preventDefault();
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const drawerToggle = document.querySelector('.drawer-toggle');
+  const menu = document.querySelector('.menu');
+
+  drawerToggle.addEventListener('click', function() {
+    menu.classList.toggle('open'); // Tambahkan atau hilangkan kelas 'open' pada daftar menu
+  });
+});
