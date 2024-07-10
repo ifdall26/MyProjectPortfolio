@@ -13,7 +13,7 @@ header {
 
 nav {
   background-color: #212121;
-  padding: 1px;
+  padding: 10px;
   box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.5);
   position: sticky;
   top: 0;
@@ -315,4 +315,90 @@ aside a:hover {
 
 .widesertf{
   width: 95%;
+}
+
+/* CSS untuk tampilan desktop */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px; /* Jarak antar menu */
+}
+
+/* CSS untuk tampilan mobile atau layar kecil */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column; /* Mengubah orientasi menjadi vertikal */
+    align-items: center; /* Pusatkan menu secara horizontal */
+  }
+
+  nav ul li {
+    margin-right: 0; /* Hapus margin kanan pada menu */
+    margin-bottom: 10px; /* Tambahkan jarak antar menu vertikal */
+  }
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.drawer-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-weight: bolder;
+  font-size: 20px;
+  color: #ffffff;
+  transition: .3s;
+}
+
+.drawer-toggle:hover{
+  text-shadow: 0px 0px 10px #14ffec, 0px 0px 20px #14ffec, 0px 0px 30px #14ffec;
+}
+
+.hamburger {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px 0;
+  transition: background-color 0.3s ease;
+}
+
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu li {
+  margin-right: 20px; /* Jarak antar menu */
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none; /* Sembunyikan daftar menu secara default pada layar kecil */
+    flex-direction: column; /* Tampilkan menu secara vertikal */
+    align-items: center; /* Pusatkan menu secara horizontal */
+    position: absolute;
+    top: 60px; /* Sesuaikan posisi menu dropdown dengan navbar */
+    left: 0;
+    width: 100%;
+    background-color: #f9f9f9;
+    padding: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+
+  .menu.open {
+    display: flex; /* Tampilkan daftar menu saat drawer dibuka */
+    background-color: #212121;
+  }
 }
