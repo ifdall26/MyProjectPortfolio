@@ -167,7 +167,6 @@ table td {
 
 #content img {
   border: 2px solid #ffffff;
-  max-height: 280px;
   object-fit: cover;
   width: 100%;
 }
