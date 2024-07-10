@@ -13,7 +13,7 @@ header {
 
 nav {
   background-color: #212121;
-  padding: 1px;
+  padding: 10px;
   box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.5);
   position: sticky;
   top: 0;
@@ -311,4 +311,29 @@ aside a:hover {
 
 .widesertf{
   width: 95%;
+}
+
+/* CSS untuk tampilan desktop */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px; /* Jarak antar menu */
+}
+
+/* CSS untuk tampilan mobile atau layar kecil */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column; /* Mengubah orientasi menjadi vertikal */
+    align-items: center; /* Pusatkan menu secara horizontal */
+  }
+
+  nav ul li {
+    margin-right: 0; /* Hapus margin kanan pada menu */
+    margin-bottom: 10px; /* Tambahkan jarak antar menu vertikal */
+  }
 }
