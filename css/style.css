@@ -16,6 +16,7 @@ nav {
   padding: 10px;
   box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.5);
   position: sticky;
+  justify-content: center;
   top: 0;
   z-index: 9999;
 }
@@ -346,6 +347,7 @@ nav {
 .drawer-toggle {
   background: none;
   border: none;
+  color: #ffffff;
   cursor: pointer;
   padding: 10px;
   font-weight: bold;
@@ -395,3 +397,23 @@ nav {
     display: flex; /* Tampilkan daftar menu saat drawer dibuka */
   }
 }
+
+/* CSS untuk tampilan desktop */
+.drawer-toggle {
+  display: none; /* Sembunyikan tombol drawer secara default pada tampilan desktop */
+}
+
+@media (max-width: 768px) {
+  /* CSS untuk tampilan mobile atau layar kecil */
+  .drawer-toggle {
+    display: block; /* Tampilkan tombol drawer pada tampilan mobile */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+  }
+  nav{
+    justify-content: flex-start;
+  }
+}
+
